@@ -1,0 +1,512 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>跟踪项目说明书 | BlueNotebook</title><meta name="author" content="Bluet Lee"><meta name="copyright" content="Bluet Lee"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="视觉跟踪项目使用说明书 写在前面： 本博客属于个人学习笔记，希望通过文章记录，规范整理自己的学习内容，方便对知识复习和分享。如果有错误的地方，还请指出，同时转载请说明出处，感谢！  目录 一、硬件安装部署   云台相机安装及调试   1.云台相机HDMI转USB3.0接口安装调试   2.云台串口线"><link rel="shortcut icon" href="/assets/favicon/favicon-32x32.png"><link rel="canonical" href="https://www.bluenote.top/2023/03/22/003-Projects/01-%E8%A7%86%E8%A7%89%E8%B7%9F%E8%B8%AA/%E8%B7%9F%E8%B8%AA%E9%A1%B9%E7%9B%AE%E8%AF%B4%E6%98%8E%E4%B9%A6/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="codeva-qB4Yi0SUoj"/><link rel="manifest" href="/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/pwa/16.png"/><link rel="mask-icon" href="/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f7d50c6456d17429fca3bebbc1d0fa60";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-RZQ3L1KHEN"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-RZQ3L1KHEN');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":150},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: 'days',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"Author: Bluet Lee","link":"Link: ","source":"Source: BlueNotebook","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '跟踪项目说明书',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-22 21:24:47'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/favicon/android-chrome-512x512.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">30</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-heart"></i><span> Resume</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://www.synotech.top:5523/wallpaper/walle.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="BlueNotebook"><span class="site-name">BlueNotebook</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-heart"></i><span> Resume</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">跟踪项目说明书</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-03-22T13:24:47.000Z" title="Created 2023-03-22 21:24:47">2023-03-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-03-22T13:24:47.000Z" title="Updated 2023-03-22 21:24:47">2023-03-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Projects/">Projects</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Projects/%E8%A7%86%E8%A7%89%E8%B7%9F%E8%B8%AA/">视觉跟踪</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">2.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>7min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="跟踪项目说明书"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1><em><strong>视觉跟踪项目使用说明书</strong></em></h1>
+<h2 id="写在前面："><em><strong>写在前面：</strong></em></h2>
+<p>本博客属于个人学习笔记，希望通过文章记录，规范整理自己的学习内容，方便对知识复习和分享。如果有错误的地方，还请指出，同时转载请说明出处，感谢！</p>
+<hr>
+<h1>目录</h1>
+<p>一、<strong>硬件安装部署</strong></p>
+<ul>
+<li>
+<p>云台相机安装及调试</p>
+<ul>
+<li>
+<p>1.云台相机HDMI转USB3.0接口安装调试</p>
+</li>
+<li>
+<p>2.云台串口线接口安装调试</p>
+</li>
+<li>
+<p>3.云台供电线接口安装调试</p>
+</li>
+</ul>
+</li>
+<li>
+<p>底盘CAN接口安装调试</p>
+<ul>
+<li>
+<p>1.检查CAN口线路连接是否不松动</p>
+</li>
+<li>
+<p>2.使用candump检查CAN通信</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>二、<strong>软件安装部署</strong></p>
+<ul>
+<li>
+<p>docker深度学习环境部署</p>
+</li>
+<li>
+<p>从机代码编译部署</p>
+</li>
+<li>
+<p>主机代码编译部署</p>
+</li>
+</ul>
+<p>三、<strong>测试部署情况</strong></p>
+<ul>
+<li>
+<p>相机硬件</p>
+</li>
+<li>
+<p>相机软件</p>
+</li>
+</ul>
+<p>四、<strong>快速开始</strong></p>
+<ul>
+<li>使用launch方式启动</li>
+</ul>
+<hr>
+<h1>一、硬件安装部署</h1>
+<h2 id="云台相机安装及调试">云台相机安装及调试</h2>
+<h3 id="1-云台相机HDMI转USB3-0接口安装调试">1. 云台相机HDMI转USB3.0接口安装调试</h3>
+<p>云台默认提供HDMI的输出，所以我们需要使用HDMI转USB3.0的线进行数据接口转换。这根线的功能是将hdmi的输出转换为USB可读取识别的一个video设备。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/uploads/2023/04/12/202304122155832.png" alt="image"></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ ls /dev/video* </span><br><span class="line">正常的情况是输出有以下的设备</span><br><span class="line">“/dev/video0” “/dev/video1”</span><br><span class="line">一般来说，默认只插入了一个相机设备，只会有/dev/video0，插入多个设备的时候，</span><br><span class="line">会增加设备/dev/video1, 代码中，我们默认使用/dev/video0，所以需要让云台相机</span><br><span class="line">是作为第一个插入到工控机USB接口上的相机设备，否则会报错，找不到设备。</span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/uploads/2023/04/12/202304122156854.png" alt="HDMI转USB"></p>
+<h3 id="2-云台串口线接口安装调试">2. 云台串口线接口安装调试</h3>
+<p>云台的串口线需要将云台的IO口按照以下示意图的方式使用USB转TTL线进行连接，才可以将另一端的USB口接到工控机上。这根线的功能是tty转成USB可识别的一个tty设备。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/uploads/2023/04/12/202304122156420.png" alt="串口链接"></p>
+<p>使用以下命令查看是否设备在Ubuntu系统上已经绑定：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/uploads/2023/04/12/202304122157444.png" alt="查看串口设备"></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ls /dev/ttyUSB0</span><br><span class="line">正常情况下，会输出设备存在</span><br><span class="line">显示“/dev/ttyUSB0”的串口设备，同样，按正常情况我们只会插入一个串口设备，所以默认读取</span><br><span class="line">的设备是/dev/ttyUSB0，所以务必确认第一个插入的串口设备是云台的串口转USB设备接口。</span><br></pre></td></tr></table></figure>
+<p><strong>注意：在代码中，默认启动和绑定的设备是&quot; /dev/video0&quot; 和 “/dev/ttyUSB0”， 工控机可能需要将/ttyUSB0的读写权限打开，否则可能会报错IOException</strong></p>
+<p>串口的接线图也可以参考如下与Pixhawk的连接方式：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/uploads/2023/04/12/202304122157870.png" alt="串口接线示意图"></p>
+<h3 id="3-云台供电线接口安装调试">3. 云台供电线接口安装调试</h3>
+<p>云台电压的输入为12V，不要使用高于12V的电压输入，底盘默认给的供电端口是12V的。</p>
+<p>使用底盘给的12V输出的点源端口，当插入供电端口后，过几秒钟，云台相机会有一个“滴滴”的提示音，同时云台会转动到默认的初始位置。</p>
+<p><strong>注意：请使用底盘的12V电源供电线或者同等标准输出12V的电源适配器，高于12V的电压可能导致云台控制器内部的电子元件造成损伤。</strong></p>
+<h2 id="底盘CAN接口安装调试">底盘CAN接口安装调试</h2>
+<h3 id="1-检查CAN口线路连接是否不松动">1.检查CAN口线路连接是否不松动</h3>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/uploads/2023/04/12/202304122158048.png" alt="CAN口连接状态"></p>
+<h3 id="2-使用candump检查CAN通信">2. 使用candump检查CAN通信</h3>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#CAN口数据调试</span><br><span class="line">$ candump can0 或者 candump can1 看你自己实际将CAN线接在哪个接口</span><br><span class="line">正常情况下，执行上面的命令之后，会输出串口的信息如下图所示。</span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/uploads/2023/04/12/202304122158278.png" alt="检查CAN通信"></p>
+<h1>二、软件安装部署</h1>
+<h2 id="1-docker深度学习环境部署">1. docker深度学习环境部署</h2>
+<p>拉取镜像或者根据用我们提供的镜像压缩包直接导入环境（根据压缩包导入环境更快捷）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 使用load在本地进行docker虚拟环境的导入</span><br><span class="line">docker load &lt; gimbal-camera-tracking.tar</span><br></pre></td></tr></table></figure>
+<p><strong>注意：目前在本地已经有该镜像只需要创建一个容器，然后进入到该容器的环境中即可。</strong></p>
+<h2 id="2-从机代码编译部署-docker中的环境是从机">2. 从机代码编译部署(docker中的环境是从机)</h2>
+<p>创建从机在本地的ROS包，如下所示</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"># 创建从机的ROS包，包名可以自己定义，这里默认是压缩包解压之后的文件情况</span><br><span class="line">gimbal-camera-tracking/gimbal_camera_ws,</span><br><span class="line"></span><br><span class="line">$ cd ~/  #进入ubuntu系统的主目录</span><br><span class="line">$ unzip gimbal-camera-tracking.zip #在系统的主目录下解压</span><br><span class="line">$ mkdir -p /gimbal_camera_ws/src #创建一个同名的ROS工作空间在主目录下</span><br><span class="line">手动将解压的源码几个包放在刚才创建的 ~/gimbal_camera_ws/src下，需要放在</span><br><span class="line">这个src路径下的包有：chassis_control fv_tracking gimbal_control pix_driver </span><br><span class="line">serial_ros serial bboxes_ex_msgs</span><br><span class="line"></span><br><span class="line"># 因为”bboxes_ex_msgs”在内部也用到了，所以拷贝bboxes_ex_msgs这个包在刚才</span><br><span class="line">解压的 gimbal_camera_tracking/src路径下。</span><br><span class="line"></span><br><span class="line"># launch文件夹在主从机的工作空间下都需要有一份</span><br><span class="line"></span><br><span class="line">最后主机环境下使用的ROS工作空间gimbal_camera_ws文件结构如下所示</span><br><span class="line">src</span><br><span class="line">├── bboxes_ex_msgs</span><br><span class="line">├── chassis_control</span><br><span class="line">├── fv_tracking</span><br><span class="line">├── gimbal_control</span><br><span class="line">├── launch</span><br><span class="line">├── pix_driver</span><br><span class="line">├── serial</span><br><span class="line">└── serial_ros</span><br><span class="line"></span><br><span class="line">从机docker环境下ROS工作空间gimbal_camera_ws文件结构如下所示</span><br><span class="line">src</span><br><span class="line">├── bboxes_ex_msgs</span><br><span class="line">├── launch</span><br><span class="line">├── siamfc_ros</span><br><span class="line">└── yolox_ros</span><br></pre></td></tr></table></figure>
+<p>创建docker环境</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ docker images  #这个命令可以列出本机上已经有的image。</span><br><span class="line"></span><br><span class="line">#镜像名是你在上面导入虚拟环境的时候，在本地会有一个image，可以使用上面的命令进行查找</span><br><span class="line">$ docker run -it --rm --gpus all --net host --privileged --ipc=host </span><br><span class="line">--volume /home/t/gimbal-camera-tracking/gimbal_camera_ws/:/root/</span><br><span class="line">gimbal_camera_ws xxx镜像名</span><br><span class="line">(gimbal-camera-tracking/pytorch-siamfc-yolox-ros-noetic/amd64:V1.1)</span><br><span class="line"></span><br><span class="line">上面这个指令执行完之后，就立马进入到docker虚拟环境中。</span><br><span class="line">$ cd /root/gimbal_camera_ws  #进入到gimbal_camera_ws的工作空间</span><br><span class="line">$ catkin_make  #使用catkin工具进行编译，这个指令会将工作空间下的src文件下所有的</span><br><span class="line">			   #源码都进行编译。</span><br><span class="line">$ source /root/gimbal_camera_ws/devel/setup.bash #source环境变量</span><br></pre></td></tr></table></figure>
+<h2 id="3-主机代码编译部署">3. 主机代码编译部署</h2>
+<p>进入到主机代码的根目录，比如，拉取的代码根目录在本机~/gimbal_camera_ws路径下</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 需要把之前在本地创建的~/gimbal_camera_ws</span><br><span class="line">进入到主机环境进行源码的编译</span><br><span class="line">$ cd ~/gimbal_camera_ws</span><br><span class="line">$ catkin_make</span><br><span class="line">$ source ~/gimbal_camera_ws/devel/setup.bash</span><br></pre></td></tr></table></figure>
+<h1>三、测试部署情况</h1>
+<h2 id="1-相机硬件">1. 相机硬件</h2>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#使用Cheese软件在Ubuntu系统上打开,或者使用以下命令打开</span><br><span class="line">$ cheese  #使用cheese工具进行相机图像的可视化，如果相机的接口正常，那么可以在</span><br><span class="line">		  #cheese的界面中看到相机当前的图像。</span><br></pre></td></tr></table></figure>
+<h2 id="2-相机软件">2.相机软件</h2>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 如果是新开的terminal终端，需要先执行以下命令</span><br><span class="line">$ cd ~/gimbal_camera_ws</span><br><span class="line">$ source devel/setup.bash</span><br><span class="line">#在主机环境下，使用以下命令检查云台的串口是否打开正确</span><br><span class="line">$ rosrun serial_ros serial_node 和</span><br><span class="line">$ rosrun serial_ros moni</span><br><span class="line">正常情况会看到如下类似输出：</span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/uploads/2023/04/12/202304122159949.png" alt="云台串口输出"></p>
+<p>有了如图所示的输出之后，说明云台串口解析是正常的。</p>
+<h1>四、快速开始</h1>
+<h2 id="使用launch方式启动">使用launch方式启动</h2>
+<ol>
+<li>进入主机环境, 进入到launch文件夹下，执行host_gimbal_camera.launch，这个launch文件可以启动云台相机、串口、底盘控制、云台控制等ROS节点。</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#主机环境下launch启动</span><br><span class="line">$ cd ~/gimbal_camera_ws/launch</span><br><span class="line">$ roslaunch host_gimbal_camera.launch</span><br></pre></td></tr></table></figure>
+<p><strong>注意：启动的时候，如果有报错信息，需要检查下相机的USB和串口线是否接好。正常启动的时候，界面会弹出相机当前的图像画面。</strong></p>
+<ol>
+<li>进入从机docker环境，进入到launch文件夹下，执行slave_track_system.launch, 这个launch文件可以启动YOLOX检测和SiamFC++跟踪的ROS节点，因为这两个节点主要依赖的深度学习环境都在docker创建的这个虚拟环境中。</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#从机环境下launch启动</span><br><span class="line">$ cd ~/gimbal_camera_ws/launch</span><br><span class="line">$ roslaunch slave_track_system.launch</span><br></pre></td></tr></table></figure>
+<p><strong>注意：启动这个launch文件之前，比如需要跟踪人体，需要被跟踪的目标距离车身1-2米的距离，尽量让物体的全貌出现在相机的图像中，这样launch之后，检测和跟踪器就可以立马锁定你需要跟踪的目标。正常启动的时候，界面会弹出一个YOLOX的检测界面和一个SiamFC++的跟踪界面以及一个被跟踪物体的模板图像（一个缩略图）。</strong></p>
+<ol>
+<li>在主机环境下新开一个terminal终端，执行以下命令，进入到launch文件夹下，执行track_and_control.launch</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#主机环境下launch启动</span><br><span class="line">$ cd ~/gimbal_camera_ws/launch</span><br><span class="line">$ roslaunch track_and_control.launch</span><br></pre></td></tr></table></figure>
+<p><strong>注意：确保自动驾驶模式在上面的launch文件启动之前，是没有打开的。这么做的原因是：防止前面检测跟踪的步骤没有做好，导致目标没有跟踪正确，底盘会立马跟随一个错误的目标。因此，在确认前面两个步骤执行正确的情况下，再launch这一步的。</strong></p>
+<ol>
+<li>确认目标现在已经被成功跟随，目标移动的同时，云台也跟随着转动，那么可以使用遥控器切换到自动驾驶模式，如下图所示：</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/uploads/2023/04/12/202304122200914.png" alt="遥控器切换自动驾驶"></p>
+<p><strong>注意：当遥控器切换到自动驾驶模式的时候，一定有人专门拿着遥控器以防出现，跟踪丢失之后的安全问题，当感觉车已经丢失目标的时候，需要按下如上图中遥控的红色圆圈圈出的位置的”MOD”按键，这样车子会立马切换到手动遥控模式，如果车辆还是没有停止，需要立马按下上图中，中间位置醒目的红色带有旋转符号的按键，这个按键是紧急停止按钮。</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://www.bluenote.top">Bluet</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://www.bluenote.top/2023/03/22/003-Projects/01-%E8%A7%86%E8%A7%89%E8%B7%9F%E8%B8%AA/%E8%B7%9F%E8%B8%AA%E9%A1%B9%E7%9B%AE%E8%AF%B4%E6%98%8E%E4%B9%A6/">https://www.bluenote.top/2023/03/22/003-Projects/01-%E8%A7%86%E8%A7%89%E8%B7%9F%E8%B8%AA/%E8%B7%9F%E8%B8%AA%E9%A1%B9%E7%9B%AE%E8%AF%B4%E6%98%8E%E4%B9%A6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Gimbal-Camera-Tracking/">Gimbal Camera Tracking</a></div><div class="post_share"><div class="social-share" data-image="https://www.synotech.top:5523/wallpaper/walle.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/assets/wechat.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/assets/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/03/23/007-ComputerVision/01-OpenCV/%E3%80%90%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%91OpenCV%E5%85%A5%E9%97%A8/" title="【第一章】OpenCV入门"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/robotics-arm.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">【第一章】OpenCV入门</div></div></a></div><div class="next-post pull-right"><a href="/2023/03/20/006-WorkExperience/%E6%9D%A5%E4%B8%8A%E6%B5%B7%E7%9A%84%E7%AC%AC%E4%B8%89%E5%B9%B4/" title="来上海的第三年"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/5f056636a92cf_270_185.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">来上海的第三年</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2022/08/24/003-Projects/01-%E8%A7%86%E8%A7%89%E8%B7%9F%E8%B8%AA/Gimbal-Camera-Tracking/" title="Gimbal-Camera-Tracking"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/SNN.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-08-24</div><div class="title">Gimbal-Camera-Tracking</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/favicon/android-chrome-512x512.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Bluet Lee</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">30</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/LiZheng1997"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Bluet1997" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/1429053840@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This blog mainly focus on taking notes of daliy study in Robotics, Computer Vision, Self-driving and so on.</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">视觉跟踪项目使用说明书</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">写在前面：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">一、硬件安装部署</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%91%E5%8F%B0%E7%9B%B8%E6%9C%BA%E5%AE%89%E8%A3%85%E5%8F%8A%E8%B0%83%E8%AF%95"><span class="toc-number">3.1.</span> <span class="toc-text">云台相机安装及调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BA%91%E5%8F%B0%E7%9B%B8%E6%9C%BAHDMI%E8%BD%ACUSB3-0%E6%8E%A5%E5%8F%A3%E5%AE%89%E8%A3%85%E8%B0%83%E8%AF%95"><span class="toc-number">3.1.1.</span> <span class="toc-text">1. 云台相机HDMI转USB3.0接口安装调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BA%91%E5%8F%B0%E4%B8%B2%E5%8F%A3%E7%BA%BF%E6%8E%A5%E5%8F%A3%E5%AE%89%E8%A3%85%E8%B0%83%E8%AF%95"><span class="toc-number">3.1.2.</span> <span class="toc-text">2. 云台串口线接口安装调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BA%91%E5%8F%B0%E4%BE%9B%E7%94%B5%E7%BA%BF%E6%8E%A5%E5%8F%A3%E5%AE%89%E8%A3%85%E8%B0%83%E8%AF%95"><span class="toc-number">3.1.3.</span> <span class="toc-text">3. 云台供电线接口安装调试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%95%E7%9B%98CAN%E6%8E%A5%E5%8F%A3%E5%AE%89%E8%A3%85%E8%B0%83%E8%AF%95"><span class="toc-number">3.2.</span> <span class="toc-text">底盘CAN接口安装调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A3%80%E6%9F%A5CAN%E5%8F%A3%E7%BA%BF%E8%B7%AF%E8%BF%9E%E6%8E%A5%E6%98%AF%E5%90%A6%E4%B8%8D%E6%9D%BE%E5%8A%A8"><span class="toc-number">3.2.1.</span> <span class="toc-text">1.检查CAN口线路连接是否不松动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8candump%E6%A3%80%E6%9F%A5CAN%E9%80%9A%E4%BF%A1"><span class="toc-number">3.2.2.</span> <span class="toc-text">2. 使用candump检查CAN通信</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">二、软件安装部署</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-docker%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2"><span class="toc-number">4.1.</span> <span class="toc-text">1. docker深度学习环境部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BB%8E%E6%9C%BA%E4%BB%A3%E7%A0%81%E7%BC%96%E8%AF%91%E9%83%A8%E7%BD%B2-docker%E4%B8%AD%E7%9A%84%E7%8E%AF%E5%A2%83%E6%98%AF%E4%BB%8E%E6%9C%BA"><span class="toc-number">4.2.</span> <span class="toc-text">2. 从机代码编译部署(docker中的环境是从机)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%B8%BB%E6%9C%BA%E4%BB%A3%E7%A0%81%E7%BC%96%E8%AF%91%E9%83%A8%E7%BD%B2"><span class="toc-number">4.3.</span> <span class="toc-text">3. 主机代码编译部署</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">三、测试部署情况</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%9B%B8%E6%9C%BA%E7%A1%AC%E4%BB%B6"><span class="toc-number">5.1.</span> <span class="toc-text">1. 相机硬件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%9B%B8%E6%9C%BA%E8%BD%AF%E4%BB%B6"><span class="toc-number">5.2.</span> <span class="toc-text">2.相机软件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">四、快速开始</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8launch%E6%96%B9%E5%BC%8F%E5%90%AF%E5%8A%A8"><span class="toc-number">6.1.</span> <span class="toc-text">使用launch方式启动</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/03/15/008-AutonomousDriving/02-Autoware.universe/3%E6%AD%A5%E5%AE%9E%E7%8E%B0%E5%9C%A8Jetson-Orin%E4%B8%8A%E8%81%94%E8%B0%83Autoware-Universe%E5%92%8CCarla-0-9-15/" title="3步实现在Jetson Orin上联调Autoware.Universe和Carla-0.9.15"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/5f363d07a24be_270_185.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="3步实现在Jetson Orin上联调Autoware.Universe和Carla-0.9.15"/></a><div class="content"><a class="title" href="/2024/03/15/008-AutonomousDriving/02-Autoware.universe/3%E6%AD%A5%E5%AE%9E%E7%8E%B0%E5%9C%A8Jetson-Orin%E4%B8%8A%E8%81%94%E8%B0%83Autoware-Universe%E5%92%8CCarla-0-9-15/" title="3步实现在Jetson Orin上联调Autoware.Universe和Carla-0.9.15">3步实现在Jetson Orin上联调Autoware.Universe和Carla-0.9.15</a><time datetime="2024-03-14T17:49:34.000Z" title="Created 2024-03-15 01:49:34">2024-03-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/03/12/008-AutonomousDriving/02-Autoware.universe/How%20to%20Joint%20testing%20between%20Autoware-Universe%20and%20Carla-0-9-15%20on%20Jetson%20Orin?/" title="How to Joint testing between Autoware-Universe and Carla-0-9-15 on Jetson Orin?"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="How to Joint testing between Autoware-Universe and Carla-0-9-15 on Jetson Orin?"/></a><div class="content"><a class="title" href="/2024/03/12/008-AutonomousDriving/02-Autoware.universe/How%20to%20Joint%20testing%20between%20Autoware-Universe%20and%20Carla-0-9-15%20on%20Jetson%20Orin?/" title="How to Joint testing between Autoware-Universe and Carla-0-9-15 on Jetson Orin?">How to Joint testing between Autoware-Universe and Carla-0-9-15 on Jetson Orin?</a><time datetime="2024-03-12T12:08:57.000Z" title="Created 2024-03-12 20:08:57">2024-03-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/11/012-IntelligentAIRobots/02-MiRoRobots/MiRo-E%E5%85%A5%E9%97%A8/" title="MiRo-E入门"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/walle.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MiRo-E入门"/></a><div class="content"><a class="title" href="/2023/10/11/012-IntelligentAIRobots/02-MiRoRobots/MiRo-E%E5%85%A5%E9%97%A8/" title="MiRo-E入门">MiRo-E入门</a><time datetime="2023-10-11T06:29:19.000Z" title="Created 2023-10-11 14:29:19">2023-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/01/013-DeepLearning/Pytorch%E4%BB%8B%E7%BB%8D/" title="Pytorch介绍"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/walle.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Pytorch介绍"/></a><div class="content"><a class="title" href="/2023/09/01/013-DeepLearning/Pytorch%E4%BB%8B%E7%BB%8D/" title="Pytorch介绍">Pytorch介绍</a><time datetime="2023-09-01T02:37:37.000Z" title="Created 2023-09-01 10:37:37">2023-09-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/08/010-EdgeComputing/01-RaspberryPi/ARM%E5%B9%B3%E5%8F%B0%E5%AE%89%E8%A3%85Clash/" title="ARM平台安装Clash"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/5f363d07a24be_270_185.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ARM平台安装Clash"/></a><div class="content"><a class="title" href="/2023/06/08/010-EdgeComputing/01-RaspberryPi/ARM%E5%B9%B3%E5%8F%B0%E5%AE%89%E8%A3%85Clash/" title="ARM平台安装Clash">ARM平台安装Clash</a><time datetime="2023-06-08T15:29:42.000Z" title="Created 2023-06-08 23:29:42">2023-06-08</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://www.synotech.top:5523/wallpaper/walle.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By Bluet Lee</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/gongan.png"><span>沪ICP备2022025612号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">简</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="Chat"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '77o07KRnVKj6P5voTBqYW5DH-gzGzoHsz',
+      appKey: 'ejznxRiBERN95PeS7KqlUM6c',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="https://cdn.jsdelivr.net/npm/blueimp-md5/js/md5.min.js"></script><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[image]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[link]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[code]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (icon, mail) => {
+    if (icon) return icon
+    let defaultIcon = '?d=monsterid'
+    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += 'No Comment'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const serverURL = 'https://77o07KRn.api.lncldglobal.com'
+
+    var settings = {
+      "method": "GET",
+      "headers": {
+        "X-LC-Id": '77o07KRnVKj6P5voTBqYW5DH-gzGzoHsz',
+        "X-LC-Key": 'ejznxRiBERN95PeS7KqlUM6c',
+        "Content-Type": "application/json"
+      },
+    }
+
+    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,settings)
+      .then(response => response.json())
+      .then(data => {
+        const valineArray = data.results.map(function (e) {
+          return {
+            'avatar': getIcon(e.QQAvatar, e.mail),
+            'content': changeContent(e.comment),
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.updatedAt,
+          }
+        })
+        saveToLocal.set('valine-newest-comments', JSON.stringify(valineArray), 10/(60*24))
+        generateHtml(valineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "Unable to get the data, please make sure the settings are correct."
+      }) 
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('valine-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="//code.tidio.co/sc7ydjlo5x4q2dbktqqfvpsdouh0n0wq.js" async="async"></script><script>function onTidioChatApiReady() {
+  window.tidioChatApi.hide();
+  window.tidioChatApi.on("close", function() {
+    window.tidioChatApi.hide();
+  });
+}
+if (window.tidioChatApi) {
+  window.tidioChatApi.on("ready", onTidioChatApiReady);
+} else {
+  document.addEventListener("tidioChat-ready", onTidioChatApiReady);
+}
+
+var chatBtnFn = () => {
+  document.getElementById("chat_btn").addEventListener("click", function(){
+    window.tidioChatApi.show();
+    window.tidioChatApi.open();
+  });
+}
+chatBtnFn()
+</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', 'G-RZQ3L1KHEN', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

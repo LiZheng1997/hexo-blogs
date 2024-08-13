@@ -1,0 +1,647 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>BlueNotebook</title><meta name="author" content="Bluet Lee"><meta name="copyright" content="Bluet Lee"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description"><link rel="shortcut icon" href="/assets/favicon/favicon-32x32.png"><link rel="canonical" href="https://www.bluenote.top/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="codeva-qB4Yi0SUoj"/><link rel="manifest" href="/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/pwa/16.png"/><link rel="mask-icon" href="/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f7d50c6456d17429fca3bebbc1d0fa60";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-RZQ3L1KHEN"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-RZQ3L1KHEN');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":150},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: 'days',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"Author: Bluet Lee","link":"Link: ","source":"Source: BlueNotebook","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'BlueNotebook',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-03-26 16:29:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/favicon/android-chrome-512x512.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">30</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-heart"></i><span> Resume</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/assets/wallpaper/209420.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="BlueNotebook"><span class="site-name">BlueNotebook</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fas fa-heart"></i><span> Resume</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">BlueNotebook</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Bluet1997" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/1429053840@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2023/06/04/009-Devops/01-Docker/Docker%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/" title="Docker网络代理配置"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/walle.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker网络代理配置"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/009-Devops/01-Docker/Docker%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/" title="Docker网络代理配置">Docker网络代理配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-06-04T11:06:25.000Z" title="Created 2023-06-04 19:06:25">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Devops/">Devops</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Devops/Docker/">Docker</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Docker/">Docker</a></span></div><div class="content">Docker网络代理配置
+之前一直被Docker容器和镜像的科学上网代理所困惑，搞了好久没搞得很清楚，这次把使用经验记录下来，方便回看。
+写在前面：
+本博客属于个人学习笔记，希望通过文章记录，规范整理自己的学习内容，方便对知识复习和分享。如果有错误的地方，还请指出，同时转载请说明出处，感谢！
+
+Docker Pull时的代理
+这个代理也称为Dockerd 代理，
+Docker pull经常碰到拉取的镜像源在国外，导致要科学上网或者延迟高的问题，所以我们需要给docker配置网络代理，方便快速地拉取镜像到本地。（网速的快慢决定了程序员一天的幸福指数）执行如下指令，添加一个代理配置文件。
+12sudo mkdir -p /etc/systemd/system/docker.service.dsudo touch /etc/systemd/system/docker.service.d/proxy.conf
+然后需要修改proxy.conf文件中的代理服务器的内容
+1234[Service]Environment=&quot;HTTP_PROXY=http://proxy.example.c ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/04/11/008-AutonomousDriving/01-%E6%84%9F%E7%9F%A5/CLOCS%E5%90%8E%E8%9E%8D%E5%90%88/" title="CLOCS后融合"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CLOCS后融合"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/11/008-AutonomousDriving/01-%E6%84%9F%E7%9F%A5/CLOCS%E5%90%8E%E8%9E%8D%E5%90%88/" title="CLOCS后融合">CLOCS后融合</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-10T16:19:54.000Z" title="Created 2023-04-11 00:19:54">2023-04-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/">自动驾驶</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/%E5%90%8E%E8%9E%8D%E5%90%88/">后融合</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%90%8E%E8%9E%8D%E5%90%88/">后融合</a></span></div><div class="content">CLOCS后融合
+本笔记主要记录在学习阅读CLOCS论文时候，摘录了一些内容汇总。
+写在前面：
+本博客属于个人学习笔记，希望通过文章记录，规范整理自己的学习内容，方便对知识复习和分享。如果有错误的地方，还请指出，同时转载请说明出处，感谢！
+
+CLOCS将3D检测结果和2D检测结果通过一个CLOCS网络进行融合，能提高1-2个AP点，而且可以提高对遮挡物体的召回率。
+创新点：
+
+
+使用任何一对预先训练好的2D/3D检测模型，不需要额外的训练，因此可以很容易和任何检测相关的模型适配起来。
+
+
+CLOCs的设计目的是利用二维和三维检测的几何和语义一致性，自动学习训练数据的概率依赖进行融合。
+
+
+CLOCs改进了单模态检测器的检测性能，以达到新的水平
+
+
+主要工作：
+将2D/3D的proposals在对应的模态中的confidence score进行关联，使用Geometric-consistency和Semantic-consistency两种约束方式。
+Geometric-consistency
+如图所示，当2D/3D检测同时检测到这个物体的时候，都是TP的情况下，我们认为，二维和三维对应 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/03/27/007-ComputerVision/01-OpenCV/%E3%80%90%E7%AC%AC%E4%B8%89%E7%AB%A0%E3%80%91%E5%9B%BE%E5%83%8F%E8%BF%90%E7%AE%97/" title="【第三章】图像运算"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/5f363d07a24be_270_185.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【第三章】图像运算"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/03/27/007-ComputerVision/01-OpenCV/%E3%80%90%E7%AC%AC%E4%B8%89%E7%AB%A0%E3%80%91%E5%9B%BE%E5%83%8F%E8%BF%90%E7%AE%97/" title="【第三章】图像运算">【第三章】图像运算</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-26T16:44:21.000Z" title="Created 2023-03-27 00:44:21">2023-03-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ComputerVision/">ComputerVision</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/ComputerVision/OpenCV/">OpenCV</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/OpenCV/">OpenCV</a></span></div><div class="content">【第三章】图像运算
+写在前面：
+本博客属于个人学习笔记，希望通过文章记录，规范整理自己的学习内容，方便对知识复习和分享。如果有错误的地方，还请指出，同时转载请说明出处，感谢！
+
+大纲：
+
+
+概述
+加号运算
+cv2.add函数
+图像加权和
+按位逻辑运算
+掩模
+图像与数值的运算
+位平面分解
+图像加密和解密
+
+
+概述
+图像的运算包含基础的一些加法运算、位运算等。本章主要介绍位平面分解、图像异或加密、数字水印、脸部打码/解码等实例。
+加号运算
+使用&quot;+&quot;运算符对两张图像进行求和运算，准守以下规则：
+$$
+a + b =  \begin{cases}
+a + b, &amp;\text{if } a+b \leqslant 255  \
+mod(a + b, 256), &amp;\text{if } a+b &gt; 255
+\end{cases}
+$$
+相加之后对应的像素值如果大于255则对256取模的方式，计算，比如 255+58=313，大于255，则计算313%256=57，像素值则修改成57。
+cv2.add()函数
+如果使用cv2.add函数，相加之后的规则如下 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/03/25/007-ComputerVision/01-OpenCV/%E3%80%90%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%91%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%9F%BA%E7%A1%80/" title="【第二章】图像处理基础"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/walle.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【第二章】图像处理基础"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/03/25/007-ComputerVision/01-OpenCV/%E3%80%90%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%91%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E5%9F%BA%E7%A1%80/" title="【第二章】图像处理基础">【第二章】图像处理基础</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-24T18:20:42.000Z" title="Created 2023-03-25 02:20:42">2023-03-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ComputerVision/">ComputerVision</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/ComputerVision/OpenCV/">OpenCV</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/OpenCV/">OpenCV</a></span></div><div class="content">【第二章】图像处理基础
+写在前面：
+本博客属于个人学习笔记，希望通过文章记录，规范整理自己的学习内容，方便对知识复习和分享。如果有错误的地方，还请指出，同时转载请说明出处，感谢！
+
+大纲：
+
+
+
+概述
+
+
+图像的基础表示方法
+2.1. 二值图像
+2.2. 灰度图像
+2.3. 彩色图像
+
+
+像素处理
+
+
+图像的属性
+
+
+后续章节内容预告
+
+
+引用文献
+
+
+
+概述
+使用Python调用OpenCV函数库的功能，我们还需要了解Numpy函数库的用法，尤其是Numpy.array库，因为图像基本在处理的时候都是使用数组的方式的进行。
+图像的基础表示方法
+二值图像、灰度图像、彩色图像的表达方式。
+二值图像
+指的是仅仅包含了黑色和白色的两种颜色的图片。
+
+实际上的矩阵形式如下：
+
+灰度图像
+计算机会将灰度处理为256个灰度级，取值范围[0,255]。其中，数值“255”表示纯白色，数值“0”表示纯黑色。正好是一个字节（8位二进制值）来表示。
+
+实际的矩阵形式如下：
+
+彩色图像
+彩色图像是一个包含了三个颜色通道的图像，分别是红、绿、蓝，这三个通道共同用来表示颜色信息。
+
+像素处理
+
+
+Numpy处理 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/03/23/007-ComputerVision/01-OpenCV/%E3%80%90%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%91OpenCV%E5%85%A5%E9%97%A8/" title="【第一章】OpenCV入门"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/robotics-arm.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【第一章】OpenCV入门"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/03/23/007-ComputerVision/01-OpenCV/%E3%80%90%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%91OpenCV%E5%85%A5%E9%97%A8/" title="【第一章】OpenCV入门">【第一章】OpenCV入门</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-23T10:11:03.000Z" title="Created 2023-03-23 18:11:03">2023-03-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ComputerVision/">ComputerVision</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/ComputerVision/OpenCV/">OpenCV</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/OpenCV/">OpenCV</a></span></div><div class="content">【第一章】OpenCV入门
+写在前面：
+本博客属于个人学习笔记，希望通过文章记录，规范整理自己的学习内容，方便对知识复习和分享。如果有错误的地方，还请指出，同时转载请说明出处，感谢！
+
+大纲：
+
+
+概述
+环境配置
+图像处理基础操作
+OpenCV贡献库
+后续章节内容预告
+引用文献
+
+
+概述
+OpenCV是一个开源的计算机视觉库，1999年由英特尔的Gary Bradski启动。同时，OpenCV库由C和C++语言编写，涵盖计算机视觉各个领域内的500多个函数，可以在多种操作系统上运行。它旨在提供一个简洁而又高效的接口，从而帮助开发人员快速地构建视觉应用。
+环境配置
+
+
+Python环境，Python3.x
+
+
+Ubuntu操作系统、Windows系统、macOS系统均可
+
+
+Anaconda安装配置　下载链接（根据自己的系统环境进行选择）
+
+
+使用Pip进行OpenCV库的安装，当前仓库代码使用OpenCV3.4.3.18
+
+
+1pip install opencv-python
+以上环境配置好后，就可以开始练习OpenCV的库函数使用。
+**注意：**本章节源码仓库可以从链接中自由获取 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/03/22/003-Projects/01-%E8%A7%86%E8%A7%89%E8%B7%9F%E8%B8%AA/%E8%B7%9F%E8%B8%AA%E9%A1%B9%E7%9B%AE%E8%AF%B4%E6%98%8E%E4%B9%A6/" title="跟踪项目说明书"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/walle.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="跟踪项目说明书"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/03/22/003-Projects/01-%E8%A7%86%E8%A7%89%E8%B7%9F%E8%B8%AA/%E8%B7%9F%E8%B8%AA%E9%A1%B9%E7%9B%AE%E8%AF%B4%E6%98%8E%E4%B9%A6/" title="跟踪项目说明书">跟踪项目说明书</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-22T13:24:47.000Z" title="Created 2023-03-22 21:24:47">2023-03-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Projects/">Projects</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Projects/%E8%A7%86%E8%A7%89%E8%B7%9F%E8%B8%AA/">视觉跟踪</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Gimbal-Camera-Tracking/">Gimbal Camera Tracking</a></span></div><div class="content">视觉跟踪项目使用说明书
+写在前面：
+本博客属于个人学习笔记，希望通过文章记录，规范整理自己的学习内容，方便对知识复习和分享。如果有错误的地方，还请指出，同时转载请说明出处，感谢！
+
+目录
+一、硬件安装部署
+
+
+云台相机安装及调试
+
+
+1.云台相机HDMI转USB3.0接口安装调试
+
+
+2.云台串口线接口安装调试
+
+
+3.云台供电线接口安装调试
+
+
+
+
+底盘CAN接口安装调试
+
+
+1.检查CAN口线路连接是否不松动
+
+
+2.使用candump检查CAN通信
+
+
+
+
+二、软件安装部署
+
+
+docker深度学习环境部署
+
+
+从机代码编译部署
+
+
+主机代码编译部署
+
+
+三、测试部署情况
+
+
+相机硬件
+
+
+相机软件
+
+
+四、快速开始
+
+使用launch方式启动
+
+
+一、硬件安装部署
+云台相机安装及调试
+1. 云台相机HDMI转USB3.0接口安装调试
+云台默认提供HDMI的输出，所以我们需要使用HDMI转USB3.0的线进行数据接口转换。这根线的功能是将hdmi的输出转换为USB可读取识别的一个video设备。
+
+123456$ ls /dev/video* 正常的情况是输出有以下的设备“/de ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/03/20/006-WorkExperience/%E6%9D%A5%E4%B8%8A%E6%B5%B7%E7%9A%84%E7%AC%AC%E4%B8%89%E5%B9%B4/" title="来上海的第三年"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/5f056636a92cf_270_185.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="来上海的第三年"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/03/20/006-WorkExperience/%E6%9D%A5%E4%B8%8A%E6%B5%B7%E7%9A%84%E7%AC%AC%E4%B8%89%E5%B9%B4/" title="来上海的第三年">来上海的第三年</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-20T13:02:25.000Z" title="Created 2023-03-20 21:02:25">2023-03-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/">工作经验</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C/%E4%B8%8A%E6%B5%B7%E5%B7%A5%E4%BD%9C/">上海工作</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E4%B8%8A%E6%B5%B7%E5%B7%A5%E4%BD%9C/">上海工作</a></span></div><div class="content">
+  c903b5c9c45cf98356bf6bd1b08921e9a7d7355157e1b2fa74916a554be4e0a0e9d67975a20d79e7de920724df337bbdbc4bb5c4518f0f002938cd11dedca8aad06bb33a4f5a3a1350597e2f4a71b2813c0aae73a013e30aae4479f0459d57fe46c54bb62e50fd4f0b9d88894929f9082e2bd6f6f8b8c1bdf5e812e3dbd818ebfb7622daa851b0dfe89f2564ef2e59392ed9e237977f22a279e331006aaebaaadbbe8b1befdb9cc67226336f97bab1959ccecd99315d932b44b5306a2ad4fcb0eda4eef22a0f539643a3d61fc1d3d200d94c3e8af576ade92a94ceb5b6af18e4efc46e41278dd921277182e45d9647d78413f676546e7db7a ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/03/20/hello-world/" title="Hello World"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/5f363d07a24be_270_185.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/03/20/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-03-20T11:34:03.966Z" title="Created 2023-03-20 19:34:03">2023-03-20</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick Start
+Create a new post
+1$ hexo new &quot;My New Post&quot;
+More info: Writing
+Run server
+1$ hexo server
+More info: Server
+Generate static files
+1$ hexo generate
+More info: Generating
+Deploy to remote sites
+1$ hexo deploy
+More info: Deployment
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/08/27/004-Linux/01-Cmake/Cmake%E5%8D%87%E7%BA%A7-Ubuntu/" title="CMake升级-Ubuntu"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/5f056636a92cf_270_185.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CMake升级-Ubuntu"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/08/27/004-Linux/01-Cmake/Cmake%E5%8D%87%E7%BA%A7-Ubuntu/" title="CMake升级-Ubuntu">CMake升级-Ubuntu</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-08-27T15:47:30.000Z" title="Created 2022-08-27 23:47:30">2022-08-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/Linux/Cmake/">Cmake</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/CMake/">CMake</a></span></div><div class="content">CMake升级方法
+写在前面：
+本博客属于个人学习笔记，希望通过文章记录，规范整理自己的学习内容，方便对知识复习和分享。如果有错误的地方，还请指出，同时转载请说明出处，感谢！
+
+大纲：
+
+
+概述
+线性建模
+2.1. 什么是线性模型
+2.2. 什么是损失函数
+2.3. 对损失函数求偏导
+2.4. 二阶导数的意义图解
+2.5. $w_0$和$w_1$的二阶导数
+预测
+正则化最小二乘法
+后续章节内容预告
+引用文献#下载图片接口 “下载图片接口”)
+
+
+概述
+Cmake升级是需要十分注意的，看了很多网上的博客，都是方式各异，也有不是很合理的方案。我们还是遵循自己作为一个开发者，全面了解Cmake具体的内容，再了解升级会有什么影响，再了解升级的不同种方式，最后让读者自己选择Cmake的升级策略。
+Cmake介绍
+Cmake是一个什么工具？Cmake开发开始于1999年，是为了解决需要一个跨平台构建环境的 Insight Segmentation and Registration Toolkit （ITK)而开发的。
+Cmake升级的影响
+首先, 如果你只是在后续的一个项目中需要使用单一版本的cm ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/08/27/005-LifeMemories/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F-%E5%BC%80%E7%AF%87/" title="人生感悟-开篇"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/2022/08/27/005-LifeMemories/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F-%E5%BC%80%E7%AF%87/677558eb37581273-166153976382210.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="人生感悟-开篇"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/08/27/005-LifeMemories/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F-%E5%BC%80%E7%AF%87/" title="人生感悟-开篇">人生感悟-开篇</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-08-26T16:24:41.000Z" title="Created 2022-08-27 00:24:41">2022-08-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BA%BA%E7%94%9F%E5%9B%9E%E5%BF%86/">人生回忆</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E4%BA%BA%E7%94%9F%E5%9B%9E%E5%BF%86/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/">人生感悟</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%84%9F%E6%82%9F/">感悟</a></span></div><div class="content">
+  c903b5c9c45cf98356bf6bd1b08921e9a7d7355157e1b2fa74916a554be4e0a089e9271e43b2b195195a606758f640439572fcfba413cad8f62a7190f354aeb8a35abc2e985a1d9892a39d94520eeca3d8087b0ba5a0a8472999eccf8402498fd6022101c5ff0b5c0a80b96cc3e7adc207e0c23b810247e1369aa7fd52cc839a15820834c99a9dc3eb76aa5b2a73102c8d8d414d87a1b90da5fb3deff1a052b251a1312264e0ba2c8978ad1dec2b88c87f98747f8e5929e2fac763e8e6c6b3e00fd067fe8ed1e1e92672bf69a2eca850c30a51db59e6d089648d88fe045287a1bd92bfdf5888374c8ccdd2984be6f6f31cb182ba639d7f11a ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/favicon/android-chrome-512x512.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Bluet Lee</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">30</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/LiZheng1997"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Bluet1997" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/1429053840@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This blog mainly focus on taking notes of daliy study in Robotics, Computer Vision, Self-driving and so on.</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/03/15/008-AutonomousDriving/02-Autoware.universe/3%E6%AD%A5%E5%AE%9E%E7%8E%B0%E5%9C%A8Jetson-Orin%E4%B8%8A%E8%81%94%E8%B0%83Autoware-Universe%E5%92%8CCarla-0-9-15/" title="3步实现在Jetson Orin上联调Autoware.Universe和Carla-0.9.15"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/5f363d07a24be_270_185.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="3步实现在Jetson Orin上联调Autoware.Universe和Carla-0.9.15"/></a><div class="content"><a class="title" href="/2024/03/15/008-AutonomousDriving/02-Autoware.universe/3%E6%AD%A5%E5%AE%9E%E7%8E%B0%E5%9C%A8Jetson-Orin%E4%B8%8A%E8%81%94%E8%B0%83Autoware-Universe%E5%92%8CCarla-0-9-15/" title="3步实现在Jetson Orin上联调Autoware.Universe和Carla-0.9.15">3步实现在Jetson Orin上联调Autoware.Universe和Carla-0.9.15</a><time datetime="2024-03-14T17:49:34.000Z" title="Created 2024-03-15 01:49:34">2024-03-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/03/12/008-AutonomousDriving/02-Autoware.universe/How%20to%20Joint%20testing%20between%20Autoware-Universe%20and%20Carla-0-9-15%20on%20Jetson%20Orin?/" title="How to Joint testing between Autoware-Universe and Carla-0-9-15 on Jetson Orin?"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="How to Joint testing between Autoware-Universe and Carla-0-9-15 on Jetson Orin?"/></a><div class="content"><a class="title" href="/2024/03/12/008-AutonomousDriving/02-Autoware.universe/How%20to%20Joint%20testing%20between%20Autoware-Universe%20and%20Carla-0-9-15%20on%20Jetson%20Orin?/" title="How to Joint testing between Autoware-Universe and Carla-0-9-15 on Jetson Orin?">How to Joint testing between Autoware-Universe and Carla-0-9-15 on Jetson Orin?</a><time datetime="2024-03-12T12:08:57.000Z" title="Created 2024-03-12 20:08:57">2024-03-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/11/012-IntelligentAIRobots/02-MiRoRobots/MiRo-E%E5%85%A5%E9%97%A8/" title="MiRo-E入门"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/walle.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MiRo-E入门"/></a><div class="content"><a class="title" href="/2023/10/11/012-IntelligentAIRobots/02-MiRoRobots/MiRo-E%E5%85%A5%E9%97%A8/" title="MiRo-E入门">MiRo-E入门</a><time datetime="2023-10-11T06:29:19.000Z" title="Created 2023-10-11 14:29:19">2023-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/01/013-DeepLearning/Pytorch%E4%BB%8B%E7%BB%8D/" title="Pytorch介绍"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/walle.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Pytorch介绍"/></a><div class="content"><a class="title" href="/2023/09/01/013-DeepLearning/Pytorch%E4%BB%8B%E7%BB%8D/" title="Pytorch介绍">Pytorch介绍</a><time datetime="2023-09-01T02:37:37.000Z" title="Created 2023-09-01 10:37:37">2023-09-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/08/010-EdgeComputing/01-RaspberryPi/ARM%E5%B9%B3%E5%8F%B0%E5%AE%89%E8%A3%85Clash/" title="ARM平台安装Clash"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://www.synotech.top:5523/wallpaper/5f363d07a24be_270_185.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ARM平台安装Clash"/></a><div class="content"><a class="title" href="/2023/06/08/010-EdgeComputing/01-RaspberryPi/ARM%E5%B9%B3%E5%8F%B0%E5%AE%89%E8%A3%85Clash/" title="ARM平台安装Clash">ARM平台安装Clash</a><time datetime="2023-06-08T15:29:42.000Z" title="Created 2023-06-08 23:29:42">2023-06-08</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>Newest Comments</span></div><div class="aside-list"><span>loading...</span></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="More">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ComputerVision/"><span class="card-category-list-name">ComputerVision</span><span class="card-category-list-count">3</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ComputerVision/OpenCV/"><span class="card-category-list-name">OpenCV</span><span class="card-category-list-count">3</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/DeepLearning/"><span class="card-category-list-name">DeepLearning</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/DeepLearning/Pytorch/"><span class="card-category-list-name">Pytorch</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Devops/"><span class="card-category-list-name">Devops</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Devops/Docker/"><span class="card-category-list-name">Docker</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/EdgeComupting/"><span class="card-category-list-name">EdgeComupting</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/EdgeComupting/RaspberryPi/"><span class="card-category-list-name">RaspberryPi</span><span class="card-category-list-count">1</span></a></li></ul></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/A-First-Course-in-ML/" style="font-size: 1.25em; color: rgb(154, 94, 90)">A First Course in ML</a><a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 1.15em; color: rgb(58, 55, 78)">感悟</a><a href="/tags/%E4%B8%8A%E6%B5%B7%E5%B7%A5%E4%BD%9C/" style="font-size: 1.15em; color: rgb(77, 20, 170)">上海工作</a><a href="/tags/Pytorch/" style="font-size: 1.15em; color: rgb(148, 18, 61)">Pytorch</a><a href="/tags/Container-Toolkit/" style="font-size: 1.15em; color: rgb(80, 91, 132)">Container-Toolkit</a><a href="/tags/Docker/" style="font-size: 1.35em; color: rgb(195, 111, 55)">Docker</a><a href="/tags/ONNX/" style="font-size: 1.15em; color: rgb(19, 156, 108)">ONNX</a><a href="/tags/TensorRT/" style="font-size: 1.25em; color: rgb(145, 150, 136)">TensorRT</a><a href="/tags/cuBLAS/" style="font-size: 1.15em; color: rgb(5, 184, 109)">cuBLAS</a><a href="/tags/Gimbal-Camera-Tracking/" style="font-size: 1.25em; color: rgb(39, 39, 2)">Gimbal Camera Tracking</a><a href="/tags/CMake/" style="font-size: 1.15em; color: rgb(24, 183, 77)">CMake</a><a href="/tags/OpenCV/" style="font-size: 1.35em; color: rgb(91, 131, 122)">OpenCV</a><a href="/tags/%E5%90%8E%E8%9E%8D%E5%90%88/" style="font-size: 1.15em; color: rgb(83, 145, 39)">后融合</a><a href="/tags/Autoware-Universe/" style="font-size: 1.45em; color: rgb(170, 54, 92)">Autoware.Universe</a><a href="/tags/Ubuntu22/" style="font-size: 1.25em; color: rgb(0, 126, 87)">Ubuntu22</a><a href="/tags/Carla/" style="font-size: 1.25em; color: rgb(8, 184, 21)">Carla</a><a href="/tags/Ubuntu18/" style="font-size: 1.15em; color: rgb(31, 141, 166)">Ubuntu18</a><a href="/tags/AWSIM/" style="font-size: 1.15em; color: rgb(99, 97, 152)">AWSIM</a><a href="/tags/ARM/" style="font-size: 1.15em; color: rgb(92, 151, 133)">ARM</a><a href="/tags/RaspberryPi/" style="font-size: 1.15em; color: rgb(41, 14, 72)">RaspberryPi</a><a href="/tags/Jetson/" style="font-size: 1.25em; color: rgb(137, 152, 93)">Jetson</a><a href="/tags/Clash/" style="font-size: 1.15em; color: rgb(132, 179, 161)">Clash</a><a href="/tags/TuringPi2/" style="font-size: 1.15em; color: rgb(135, 70, 170)">TuringPi2</a><a href="/tags/Vector/" style="font-size: 1.25em; color: rgb(170, 153, 154)">Vector</a><a href="/tags/MiRo/" style="font-size: 1.15em; color: rgb(7, 42, 60)">MiRo</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">October 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">September 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">June 2023</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">April 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">March 2023</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/08/"><span class="card-archive-list-date">August 2022</span><span class="card-archive-list-count">10</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">28</div></div><div class="webinfo-item"><div class="item-name">Run time :</div><div class="item-count" id="runtimeshow" data-publishDate="2022-07-31T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Total Count :</div><div class="item-count">25k</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-03-26T08:29:02.829Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/assets/wallpaper/209420.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By Bluet Lee</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/gongan.png"><span>沪ICP备2022025612号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">简</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="chat_btn" type="button" title="Chat"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["Enjoy your journey&#44; Taste your time.","享受旅程&#44; 品位时光"])
+  } else {
+    document.getElementById("subtitle").innerHTML = 'Enjoy your journey&#44; Taste your time.'
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script src="https://cdn.jsdelivr.net/npm/blueimp-md5/js/md5.min.js"></script><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[image]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[link]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[code]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (icon, mail) => {
+    if (icon) return icon
+    let defaultIcon = '?d=monsterid'
+    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += 'No Comment'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const serverURL = 'https://77o07KRn.api.lncldglobal.com'
+
+    var settings = {
+      "method": "GET",
+      "headers": {
+        "X-LC-Id": '77o07KRnVKj6P5voTBqYW5DH-gzGzoHsz',
+        "X-LC-Key": 'ejznxRiBERN95PeS7KqlUM6c',
+        "Content-Type": "application/json"
+      },
+    }
+
+    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,settings)
+      .then(response => response.json())
+      .then(data => {
+        const valineArray = data.results.map(function (e) {
+          return {
+            'avatar': getIcon(e.QQAvatar, e.mail),
+            'content': changeContent(e.comment),
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.updatedAt,
+          }
+        })
+        saveToLocal.set('valine-newest-comments', JSON.stringify(valineArray), 10/(60*24))
+        generateHtml(valineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "Unable to get the data, please make sure the settings are correct."
+      }) 
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('valine-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="//code.tidio.co/sc7ydjlo5x4q2dbktqqfvpsdouh0n0wq.js" async="async"></script><script>function onTidioChatApiReady() {
+  window.tidioChatApi.hide();
+  window.tidioChatApi.on("close", function() {
+    window.tidioChatApi.hide();
+  });
+}
+if (window.tidioChatApi) {
+  window.tidioChatApi.on("ready", onTidioChatApiReady);
+} else {
+  document.addEventListener("tidioChat-ready", onTidioChatApiReady);
+}
+
+var chatBtnFn = () => {
+  document.getElementById("chat_btn").addEventListener("click", function(){
+    window.tidioChatApi.show();
+    window.tidioChatApi.open();
+  });
+}
+chatBtnFn()
+</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', 'G-RZQ3L1KHEN', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
